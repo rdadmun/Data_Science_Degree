@@ -54,17 +54,18 @@ Removed Fields:
 and **Lon_Lat**. 
 
 ```{r Delete Unused Fields}
-NYC_Shootings_2 <- NYC_Shootings %>%      select(INCIDENT_KEY, 
-                   OCCUR_DATE,
-                   OCCUR_TIME,
-                   BORO, 
-                   STATISTICAL_MURDER_FLAG,
-                   PERP_AGE_GROUP,
-                   PERP_SEX,
-                   PERP_RACE,
-                   VIC_AGE_GROUP,
-                   VIC_SEX,
-                   VIC_RACE)
+NYC_Shootings_2 <- NYC_Shootings %>%
+  select(INCIDENT_KEY,
+  OCCUR_DATE,
+  OCCUR_TIME,
+  BORO,
+  STATISTICAL_MURDER_FLAG,
+  PERP_AGE_GROUP,
+  PERP_SEX,
+  PERP_RACE,
+  VIC_AGE_GROUP,
+  VIC_SEX,
+  VIC_RACE)
 
 summary(NYC_Shootings_2)
 ```

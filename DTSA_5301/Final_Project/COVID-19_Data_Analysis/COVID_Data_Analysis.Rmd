@@ -177,7 +177,7 @@ summary(US_data)
 
 ##State Cleaning and Drill Down
 
-As my state of origin, I have chosen to drill down on Tennessee data. As such, I will create HOWMANY dataframes specific to Tennessee. 
+As my state of origin, I have chosen to drill down on Tennessee data. As such, I will create four dataframes specific to Tennessee. 
 
 We create multiple data frames to individually group the data.   
 - First, we create **tn_df**, a mirror of the total US data for just TN. Drilling down here, we have two counties listed which will throw out errors in our computation - **Out of TN** and **Unassigned**. As such we will drop these rows.  
