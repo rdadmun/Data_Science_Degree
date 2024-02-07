@@ -3,8 +3,8 @@ title: "NYC Shooting Data Analysis DTSA_5301"
 author: "R. Dadmun"
 date: "2024-01-22"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}

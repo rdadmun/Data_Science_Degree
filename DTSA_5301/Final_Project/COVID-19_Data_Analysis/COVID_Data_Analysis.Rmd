@@ -270,7 +270,7 @@ ggplot(scott_county, aes(x=date)) +
 
 
 ## Analysis of Stewart County, the Tennessee county with the lowest COVID case rate per population
-```{r scott_county}
+```{r stewart_county}
 # Create a new data frame for Stewart County and add columns for daily new cases and deaths.
 stewart_county <- tn_counties %>%
   filter(Admin2 == "Stewart") %>%
