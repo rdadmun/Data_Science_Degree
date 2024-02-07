@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This is a breakdown of every shooting incident that occurred in NYC from 2006-2023. This data is manually extracted every quarter and reviewed by the Office of Management Analysis and Planning before being posted on the NYPD website. Each record represents a shooting incident in NYC and includes information about the event, the location and time of occurrence. Please refer to [NYPD Shooting Incident Data (Historic) - CKAN](https://catalog.data.gov/dataset/nypd-shooting-incident-data-historic) for more information about this dataset.
+This is a breakdown of every shooting incident that occurred in NYC from 2006-2023. This data is manually extracted every quarter and reviewed by the Office of Management Analysis and Planning before being posted on the NYPD website. Each record represents a shooting incident in NYC and includes information about the event, the location and time of occurrence. Please refer to [NYPD Shooting Incident Data (Historic) - CKAN] https://catalog.data.gov/dataset/nypd-shooting-incident-data-historic for more information about this dataset.
 
 ## Purpose
 
@@ -164,7 +164,7 @@ From the table above, we can see that the vast majority of victims of shooting i
 We will utilize a bar chart to compare this distributions in a more visual way:
 
 ```{r Fatal_Age_Bar}
-NYC_Shootings_2 %>%
+Age_Graph <- NYC_Shootings_2 %>%
   filter(VIC_AGE_GROUP != "Unknown") %>%
   ggplot(aes(x = VIC_AGE_GROUP, fill = (STATISTICAL_MURDER_FLAG))) +
   geom_bar(position = "dodge") +
@@ -173,6 +173,8 @@ NYC_Shootings_2 %>%
       x = "Victim Age Group",
       y = "Total Shooting Incidents",
       fill = "Flagged as Murder")
+
+Age_Graph
 ```
 Based on the table above, I hypothesize that age group is correlated with the STATISTICAL_MURDER_FLAG field. 
 
@@ -211,7 +213,7 @@ Race_Graph <- NYC_Shootings_2 %>%
   ggplot(aes(y = VIC_RACE, fill = (STATISTICAL_MURDER_FLAG))) +
   geom_bar(position = "dodge") +
   theme_bw() +
-  labs(title = "NYC Shooting Incidents by Sex",
+  labs(title = "NYC Shooting Incidents by Race",
       x = "Victim Sex",
       y = "Total Shooting Incidents",
       fill = "Flagged as Murder")
