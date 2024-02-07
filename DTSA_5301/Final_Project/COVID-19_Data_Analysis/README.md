@@ -1,0 +1,1 @@
+This project folder serves as a shareable link for the University of Colorado's Masters of Data Science Degree, specifically for DTSA 5301 Data Science as a Field. This folder is where my final deliverable, specifically the COVID-19 Data Analysis will be held
