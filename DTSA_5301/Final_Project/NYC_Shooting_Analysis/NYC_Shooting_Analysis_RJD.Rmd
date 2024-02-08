@@ -126,7 +126,7 @@ As we can see, our data is clean with no NA entries.
 
 ### 1. Which part of New York has the most number of incidents? Of those incidents, how many are murder cases? 
 
-```{r Q1, echo=FALSE}
+```{r Q1}
 Boro_Graph <- ggplot(NYC_Shootings_2, aes(x = BORO)) +
   geom_bar(fill = "blue") +
   labs(title = "Shooting Incidents in NYC by Borough of Occurence",
